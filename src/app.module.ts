@@ -20,7 +20,6 @@ import { EtablissementModule } from './etablissements/etablissement.module';
 import { ScraperModule } from './scraper/scraper.module';
 import { Magasin } from './magasin/magasin.schema';
 import { MagasinModule } from './magasin/magasin.module';
-import { CheckModule } from './check/check.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { ClientModule } from './client/client.module';
 import { MailerModule } from '@nestjs-modules/mailer';
@@ -34,7 +33,6 @@ import { MailerModule } from '@nestjs-modules/mailer';
     AuthModule,
     ScraperModule,
     StockModule,
-    CheckModule,
     InvoiceModule,
     ClientModule,
     MagasinModule,
