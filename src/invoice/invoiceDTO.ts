@@ -1,10 +1,11 @@
 // src/invoice/dto/create-invoice.dto.ts
 class InvoiceItemDto {
-  stockId: string;
-  magasinId: string;
+  stockId: number;
+  color: string;
+  size: string;
+  image: string;
   reference: string;
   nom: string;
-  taille: number;
   quantity: number;
   prixAchat: number;
   prixVente: number;
@@ -21,6 +22,6 @@ export class CreateInvoiceDto {
   subtotal: number;
   tax: number;
   total: number;
-  status?: 'paid' | 'unpaid' | 'partially_paid';
+  status?: 'valid' | 'rejected' | 'pending';
   notes?: string;
 }

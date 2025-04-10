@@ -1,8 +1,10 @@
-export class StockByMagasin {
+export class StockByColor {
   quantiteInitiale: number;
   quantiteVendue: number;
   quantitePerdue: number;
-  magasinId: string;
+  sizes: string;
+  color: string;
+  images: string;
 }
 export class StockDTO {
   nom: string;
@@ -10,5 +12,5 @@ export class StockDTO {
   taille: number;
   prixAchat: number;
   prixVente: number;
-  quantite: StockByMagasin[];
+  quantite: StockByColor[];
 }

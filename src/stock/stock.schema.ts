@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
-import { StockByMagasin } from './stockDTO';
+import { StockByColor } from './stockDTO';
 
 export type StockDocument = Stock & Document;
 
@@ -30,7 +30,7 @@ export class Stock {
   // @Prop({ required: true, default: 0, min: 0 })
   // quantitePerdue: number;
   @Prop({ type: Array, required: true })
-  quantite: StockByMagasin[];
+  quantite: StockByColor[];
 
   // // Virtuals
   // quantiteDisponible?: number;

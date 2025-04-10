@@ -9,8 +9,8 @@ import { Stock, StockSchema } from 'src/stock/stock.schema';
 @Module({
   imports: [
     MongooseModule.forFeature([
-      { name: Invoice.name, schema: InvoiceSchema },
-      { name: Stock.name, schema: StockSchema },
+      { name: 'Orders', schema: InvoiceSchema },
+      { name: 'Product', schema: StockSchema },
     ]),
   ],
   controllers: [InvoiceController],

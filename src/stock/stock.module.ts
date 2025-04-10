@@ -14,7 +14,7 @@ import { StockController } from './stock.controller';
     CacheModule.register(),
     MongooseModule.forFeature([
       {
-        name: 'Stock',
+        name: 'Product',
         schema: StockSchema,
       },
     ]),

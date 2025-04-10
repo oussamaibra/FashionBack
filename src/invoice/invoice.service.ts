@@ -40,7 +40,9 @@ export class InvoiceService {
               },
             },
             {
-              arrayFilters: [{ 'elem.magasinId': item.magasinId }],
+              arrayFilters: [
+                { 'elem.color': item.color, 'elem.size': item.size },
+              ],
             },
           )
           .exec(), // Don't forget exec() to return a proper promise
@@ -94,10 +96,7 @@ export class InvoiceService {
     return updatedInvoice;
   }
 
-  async updateStatus(
-    id: string,
-    status: 'paid' | 'unpaid' | 'partially_paid',
-  ): Promise<Invoice> {
+  async updateStatus(id: string, status: string): Promise<Invoice> {
     const updatedInvoice = await this.invoiceModel
       .findByIdAndUpdate(id, { status }, { new: true })
       .exec();

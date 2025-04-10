@@ -27,10 +27,11 @@ export class Invoice {
   @Prop([
     {
       stockId: { type: Types.ObjectId, ref: 'Stock', required: false },
-      magasinId: { type: Types.ObjectId, ref: 'Magasin', required: false },
+      color: { type: String, required: false },
+      size: { type: String, required: false },
       reference: { type: String, required: false },
       nom: { type: String, required: false },
-      taille: { type: Number, required: false },
+      image: { type: String, required: false },
       quantity: { type: Number, required: false, min: 1 },
       prixAchat: { type: Number, required: false },
       prixVente: { type: Number, required: false },
@@ -38,10 +39,11 @@ export class Invoice {
   ])
   items: {
     stockId: Types.ObjectId;
-    magasinId: Types.ObjectId;
+    color: string;
+    size: string;
+    image: string;
     reference: string;
     nom: string;
-    taille: number;
     quantity: number;
     prixAchat: number;
     prixVente: number;
@@ -56,8 +58,8 @@ export class Invoice {
   @Prop({ required: false, default: 0 })
   total: number;
 
-  @Prop({ default: 'unpaid' })
-  status: 'paid' | 'unpaid' | 'partially_paid';
+  @Prop({ default: 'pending' })
+  status: 'valid' | 'rejected' | 'pending';
 
   @Prop()
   notes?: string;

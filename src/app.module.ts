@@ -35,26 +35,6 @@ import { MailerModule } from '@nestjs-modules/mailer';
     ScraperModule,
     StockModule,
     CheckModule,
-    MailerModule.forRoot({
-      transport: {
-        host: 'your-smtp-host', // e.g., 'smtp.gmail.com'
-        secure: false,
-        auth: {
-          user: 'your-email@example.com',
-          pass: 'your-email-password',
-        },
-      },
-      defaults: {
-        from: '"No Reply" <no-reply@example.com>',
-      },
-      template: {
-        dir: join(__dirname, 'templates'), // Create a 'templates' folder in your src directory
-        //adapter: new HandlebarsAdapter(),
-        options: {
-          strict: true,
-        },
-      },
-    }),
     InvoiceModule,
     ClientModule,
     MagasinModule,
