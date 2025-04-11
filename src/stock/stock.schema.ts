@@ -12,9 +12,6 @@ export class Stock {
   @Prop({ required: true, unique: true, trim: true, uppercase: true })
   reference: string;
 
-  @Prop({ required: true, min: 1, max: 6 })
-  taille: number;
-
   @Prop({ required: true, min: 0, default: 0 })
   prixAchat: number;
 
@@ -30,7 +27,7 @@ export class Stock {
   // @Prop({ required: true, default: 0, min: 0 })
   // quantitePerdue: number;
   @Prop({ type: Array, required: true })
-  quantite: StockByColor[];
+  options: StockByColor[];
 
   // // Virtuals
   // quantiteDisponible?: number;

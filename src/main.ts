@@ -12,7 +12,7 @@ async function bootstrap() {
   // Use the compression middleware
   app.use(compression());
 
-  await app.listen(300);
+  await app.listen(3003);
   app.enableShutdownHooks();
 }
 bootstrap();

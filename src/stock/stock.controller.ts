@@ -11,7 +11,7 @@ import {
 import { StockService } from './stock.service';
 import { StockDTO } from './stockDTO';
 
-@Controller('stock')
+@Controller('produit')
 export class StockController {
   constructor(private readonly stockService: StockService) {}
 
