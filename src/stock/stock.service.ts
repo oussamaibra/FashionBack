@@ -44,4 +44,7 @@ export class StockService {
   async findByTaille(taille: number): Promise<Stock[]> {
     return this.stockModel.find({ taille }).exec();
   }
+  async findByCategory(category: string) {
+    return this.stockModel.find({ category }).exec();
+  }
 }

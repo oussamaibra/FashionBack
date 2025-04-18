@@ -9,6 +9,7 @@ export class StockByColor {
 export class StockDTO {
   nom: string;
   reference: string;
+  category: string;
   prixAchat: number;
   prixVente: number;
   options: StockByColor[];
