@@ -9,11 +9,8 @@ export class Invoice {
   @Prop({ required: false })
   invoiceNumber: string;
 
-  @Prop({ type: Date, required: false })
+  @Prop({ type: String, required: false })
   date: string;
-
-  @Prop({ type: Types.ObjectId, ref: 'Client' })
-  customerId?: Types.ObjectId;
 
   @Prop({ required: false })
   customerName: string;
@@ -26,7 +23,7 @@ export class Invoice {
 
   @Prop([
     {
-      stockId: { type: Types.ObjectId, ref: 'Stock', required: false },
+      stockId: { type: String, required: false },
       color: { type: String, required: false },
       size: { type: String, required: false },
       reference: { type: String, required: false },
@@ -38,7 +35,7 @@ export class Invoice {
     },
   ])
   items: {
-    stockId: Types.ObjectId;
+    stockId: string;
     color: string;
     size: string;
     image: string;

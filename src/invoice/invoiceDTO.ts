@@ -1,6 +1,6 @@
 // src/invoice/dto/create-invoice.dto.ts
 class InvoiceItemDto {
-  stockId: number;
+  stockId: string;
   color: string;
   size: string;
   image: string;
@@ -14,7 +14,6 @@ class InvoiceItemDto {
 export class CreateInvoiceDto {
   invoiceNumber?: string;
   date: string;
-  customerId?: string;
   customerName: string;
   customerAddress: string;
   customerPhone: string;
