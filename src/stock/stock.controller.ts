@@ -24,6 +24,10 @@ export class StockController {
   findAll() {
     return this.stockService.findAll();
   }
+  @Get('/cat/:category')
+  findByCategory(@Param('category') category: string) {
+    return this.stockService.findByCategory(category);
+  }
 
   @Get('/:id')
   findOne(@Param('id') id: string) {
